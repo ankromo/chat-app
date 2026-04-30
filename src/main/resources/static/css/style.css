@@ -1,3 +1,52 @@
 * {
   box-sizing: border-box;
 }
+
+.wrapper{
+  display:flex;
+  height: 100vh;
+}
+
+.side{
+  width: 300px;
+  background-color: #253141;
+}
+
+.side-header{
+  height: 100px;
+  background-color: #253141;
+  padding: 0px 20px;
+
+}
+
+.room{
+  background-color: #2f3e51;
+  height: calc(100vh - 100px);
+  padding: 0px 20px;
+}
+
+.main{
+  width: calc(100vw - 300px);
+  background-color: #ffffff;
+}
+
+.main-header{
+  height: 100px;
+  background-color: #ffffff;
+  padding: 0px 40px;
+
+}
+
+.main-chat{
+  height: calc(100vh - 190px);
+  background-color: #fafafa;
+  padding: 46px 0px 0px 0px;
+  padding: 0px 40px;
+
+}
+
+.form{
+  height: 90px;
+  background-color: #dddddd;
+  padding: 20px 40px;
+}
