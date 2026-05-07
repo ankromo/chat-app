@@ -1,15 +1,65 @@
 <!DOCTYPE html>
-<html xmlns:th="http:///www.thymeleaf.org" lang="ja">
+<html xmlns:th="http://www.thymeleaf.org" lang="ja">
   <div th:fragment="main_chat">
     <div class="main-header">
+      <div class="chat-title">
+        hogefuga
+      </div>
+      <div class="chat-delete">
+        <a href="#">チャットを終了する</a>
+      </div>
+      
 
     </div>
 
     <div class="main-chat">
+      <div class="message">
+      <div class="upper">
+        <div class="sender">
+          Tom
+        </div>
+        <div class="message-date">
+          2026/5/7(thu) 11:33:00
+        </div>
+        </div>
+        <div class="lower">
+        <div class="message-content">
+          hello
+        </div>
+      </div>
+      </div>
 
-    </div>
+      <div class="message">
+      <div class="upper">
+        <div class="sender">
+          Tom
+        </div>
+        <div class="message-date">
+          2026/5/7(thu) 11:33:00
+        </div>
+        </div>
+        <div class="lower">
+        <div class="message-content">
+          こんにちは
+        </div>
+      </div>
+      </div>
+  </div>
+
 
     <div class="form">
+      <div class="send-form">        
+        <input class="form-message" placeholder="type a message" >
+        <label class="form-image">
+          <span class="image-file">画像</span>
+            <input type="file" class="hidden">
+            </label>
+          
+        </label>
+       </div>
+        <input class="form-submit" type=submit value="送信" >
+      
+    </form>
       
     </div>
   </div>
