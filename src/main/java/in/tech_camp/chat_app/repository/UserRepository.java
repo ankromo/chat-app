@@ -1,8 +1,8 @@
 package in.tech_camp.chat_app.repository;
 
 import org.apache.ibatis.annotations.Insert;
-import org.apache.ibatis.annotations.Options;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Options;
 import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.Update;
 
@@ -22,4 +22,10 @@ public interface UserRepository {
 
   @Update("UPDATE users SET name =#{name},email=#{email} WHERE id =#{id}")
   void update(UserEntity user);
+
+  @Select("SELECT EXISTS(SELECT 1 FROM users WHERE email =#{email})")
+  boolean existsByEmail(String email);
+
+  @Select("SELECT COUNT(*) > 0 FROM users WHERE email=#{email} AND id !=#{userId}")
+  boolean existsByEmailExcludingCurrent(String email,Integer userId);
 }
