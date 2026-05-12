@@ -13,12 +13,12 @@ import in.tech_camp.chat_app.entity.RoomUserEntity;
 
 @Mapper
 public interface RoomUserRepository {
-  @Insert("INSERT INTO room_users(user_id,room_id)VALUES(#{user.id},#{user.id},#{room.id})")
+  @Insert("INSERT INTO room_users(user_id,room_id)VALUES(#{user.id},#{room.id})")
   @Options(useGeneratedKeys=true, keyProperty="id")
   void insert(RoomUserEntity userRoomEntity);
   
   @Select("SELECT * FROM room_users WHERE user_id=#{userId}")
   @Result(property ="room",column ="room_id",
-    one =@One(select="in.tech_camp.chat_app/repository.RoomRepository.findById"))
+    one =@One(select="in.tech_camp.chat_app.repository.RoomRepository.findById"))
     List<RoomUserEntity>findByUserId(Integer userId);
 }

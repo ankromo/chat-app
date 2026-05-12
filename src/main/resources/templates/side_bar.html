@@ -6,7 +6,7 @@
       <a th:href="@{/users/{userId}/edit(userId=${user.id})}" th:text="${user.name}">ユーザー名</a>
     </div>
     <div class="chat-b">
-      <a href="@{/rooms/new}">チャットを作成する</a>
+      <a th:href="@{/rooms/new}">チャットを作成する</a>
       </div>
     
     </div>
@@ -14,14 +14,10 @@
     <div class="rooms">
       <div th:each="room : ${rooms}" class="room">
       <div class="room-name">
-        <a href="#" th:text="${room.name}">room1</a>
+      <a th:href="@{/rooms/{roomId}/messages(roomId=${room.id})}" th:text="${room.name}">room</a>
       </div>
       </div>
-      <div class="room">
-      <div class="room-name">
-        <a href="#">room2</a>
-      </div>
-      </div>
+      
 
     </div>
   </div>

@@ -76,11 +76,20 @@
   margin-top:40px;
 }
 
-.chat-delete a{
+/* .chat-delete a{
   border: 1px solid darkred;
   color:darkred;
   padding:20px;
   text-decoration: none;
+} */
+
+.chat-delete input[type="submit"] {
+  text-decoration: none;
+  border: 1px solid darkred;
+  color: darkred;
+  background-color: #fff;
+  padding: 20px;
+  cursor: pointer;
 }
 
 
