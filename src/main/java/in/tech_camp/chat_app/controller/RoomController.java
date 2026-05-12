@@ -42,7 +42,7 @@ public class RoomController {
         .map(RoomUserEntity::getRoom)
         .collect(Collectors.toList());
     model.addAttribute("rooms", roomList);
-    return "messages/index";
+    return "rooms/index";
   }
 
   @GetMapping("/rooms/new")
