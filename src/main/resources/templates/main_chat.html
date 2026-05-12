@@ -13,36 +13,15 @@
     </div>
 
     <div class="main-chat">
-      <div class="message">
+      <div  th:each="message : ${messages}" class="message">
       <div class="upper">
-        <div class="sender">
-          Tom
-        </div>
-        <div class="message-date">
-          2026/5/7(thu) 11:33:00
-        </div>
+        <div class="message-user" th:text="${message.user.name}">ユーザー名</div>
+        <div class="message-date" th:text="${message.createdAt}">日付</div>
         </div>
         <div class="lower">
-        <div class="message-content">
-          hello
-        </div>
+        <div class="message-content" th:text="${message.content}">メッセージ内容</div>
       </div>
-      </div>
-
-      <div class="message">
-      <div class="upper">
-        <div class="sender">
-          Tom
-        </div>
-        <div class="message-date">
-          2026/5/7(thu) 11:33:00
-        </div>
-        </div>
-        <div class="lower">
-        <div class="message-content">
-          こんにちは
-        </div>
-      </div>
+    </div>
       </div>
   </div>
 
