@@ -23,8 +23,11 @@
         <div class="lower">
         <div class="message-content" th:text="${message.content}">メッセージ内容</div>
       </div>
+      <div th:if="${message.image}">
+        <img th:src="@{${message.image}}" alt="メッセージ画像" style="width:500px; height:500px;"/>
+        </div>
       </div>
-      </div>     
+   </div>     
 
 
     <form th:action="@{/rooms/{roomId}/messages(roomId=${roomId})}" method="post" th:object="${messageForm}" class="form" enctype="multipart/form-data">
