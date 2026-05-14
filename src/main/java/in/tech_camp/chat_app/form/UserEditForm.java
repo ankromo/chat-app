@@ -14,6 +14,6 @@ public class UserEditForm {
   private String name;
 
   @NotBlank(message="Email can't be blank",groups = ValidationPriority1.class)
-  @Email(message="Email shoud be valid",groups = ValidationPriority2.class)
+  @Email(message="Email should be valid",groups = ValidationPriority2.class)
   private String email;
 }
