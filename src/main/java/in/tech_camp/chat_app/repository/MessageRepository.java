@@ -18,12 +18,16 @@ public interface MessageRepository {
   @Options(useGeneratedKeys = true, keyProperty = "id")
   void insert(MessageEntity messageEntity);
 
+  @Select("SELECT COUNT(*) FROM messages")
+  int count();
+
   @Select("SELECT * FROM messages WHERE room_id =#{roomId*}")
   @Results(value={
     @Result(property="createdAt",column="created_at"),
     @Result(property="user",column="user_id",
       one=@One(select="in.tech_camp.chat_app.repository.UserRepository.findById"))
       
+
     })
     List<MessageEntity>findByRoomId(Integer roomId);
 }

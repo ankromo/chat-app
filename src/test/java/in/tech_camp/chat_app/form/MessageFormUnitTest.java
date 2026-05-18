@@ -22,7 +22,7 @@ public class MessageFormUnitTest {
 
   @BeforeEach
   public void setUp(){
-    messageForm = MessageFormFactory.createMessageForm();
+    messageForm = MessageFormFactory.createMessage();
     bindingResult = Mockito.mock(BindingResult.class);
 
   }

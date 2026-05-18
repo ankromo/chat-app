@@ -9,7 +9,7 @@ import in.tech_camp.chat_app.form.MessageForm;
 public class MessageFormFactory {
   private static final Faker faker=new Faker();
 
-  public static MessageForm createMessageForm(){
+  public static MessageForm createMessage(){
     MessageForm messageForm =new MessageForm();
     
     messageForm.setContent(faker.lorem().sentence());
